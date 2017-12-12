@@ -1,0 +1,198 @@
+/*Notes
+
+Combinators:
+
+•	descendant selector (space) = elements inside of an element on any level,e.g div p - paragraphs in div
+•	child selector (>) = elements immediately inside an element
+•	adjacent sibling selector (+) = elements on the same level immediately after each other
+•	general sibling selector (~) = elements on the same level in any position
+
+CSS [attribute] Selector:
+
+a[target] = all links with a target attribute, e.g. <a href="http://whatever" target="_top"> link </a>
+Specific attributes: 
+[target="_blank"]      = is a value
+[attribute~="value"] = contains a value (must be a word - no hyphens)
+[attribute|="value"] = starts with a value (must be a word or hyphenated)
+[attribute^="value"] = begins with a value(doesn't have to be a word - but no spaces in front)
+[attribute$="value"] = ends with a value (doesn't have to be a word)
+[attribute*="value"] = contains a value anywhere (doesn't have to be a word)
+
+Colors
+#429ef4 - main blue
+#429ef4 blue
+#0066ff - complement to orange - light blue
+*/
+
+/* HTML */
+/*============================================================*/
+body
+{
+	margin:0;
+	padding:0;
+	background:#111;	
+	background-repeat: no-repeat;
+	background-attachment:fixed;
+	background-size: 100%;
+	position:relative; 
+	color: #000;
+	font-size:15px;
+}
+.clearfix {/* Clearfix - make sure floated elements don't overflow its containers*/
+    overflow: auto;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+input[type="button"] , input[type="submit"], input[type="reset"]
+{
+     color: #fff;
+	 padding-left: 10px;
+	 padding-right: 10px;
+	 margin: 2px 0px;
+	 border:none;
+	 height: 26px;
+	 line-height:30px;
+	 background: #333;
+     font: 2.4em Futura, ‘Century Gothic’, AppleGothic, sans-serif;
+     font-size:70%;
+     cursor:pointer;
+	 border-radius:1px;
+	 transition:1s;
+	 outline:none;
+}
+input[type="button"]:disabled , input[type="submit"]:disabled, input[type="reset"]:disabled, button
+{
+	border:1px solid red;	
+	background: #777;
+	color:#555;
+}
+header, section, footer, aside, nav, main, article, figure {
+    display: block; 
+}
+
+#main
+{
+	width: 800px;
+	height:auto;
+	overflow: auto;
+	margin:auto;
+	background:#333;
+	color:#fff;
+	padding: 10px;
+}
+
+#processing_message
+{
+	width:auto;
+	text-align:left;
+	background:#444;
+	padding:5px;
+	margin-top: 5px;
+	margin-bottom:3px;
+	color: #fff;
+	font-size:12px;
+	height:auto;
+	min-height:25px;
+	line-height:25px;
+}
+
+.heading
+{
+	background:#555;
+	padding:3px;
+	border-bottom:1px solid #429ef4;
+	text-align:center;
+}
+.log_line
+{
+	display:inline-block;
+	width:100%;
+	height:auto;
+	white-space: pre-wrap; 
+    word-break:break-all;
+	display:table-cell;
+	vertical-align:middle;	
+	
+	height:20px;
+	line-height:20px;
+	
+    color:#eee; 
+	padding:4px 0px;
+	float:left;
+	clear:both;
+}
+
+.log_line_tracking
+{
+	display:inline-block;
+	width:auto;
+	height:auto;
+    word-break:break-all;
+	vertical-align:middle;	
+	margin:2px;
+	padding:5px;
+    color:#eee; 
+}
+
+.description
+{
+	color: #429ef4;
+
+}
+.system_message, .critical_message,.repeating_operation
+{
+	display:inline-block;
+	float:left;
+	color:white;
+	background:green; 
+	width: auto;
+	display:inline-block;
+	border-radius:5px;
+	padding:3px;
+	margin:2px;
+}
+.critical_message
+{
+	background:orange;
+}
+.repeating_operation
+{
+	background: #42c8f4;
+}
+.frame_separator
+{
+	color:white;
+	width: 250px;
+	margin:auto;
+	margin-top:5px; 
+	clear:both;
+	text-align:center;
+	border-radius: 5px;
+}
+.separator_v2 
+{
+	width:calc(100%-10px);
+	text-align:left;
+	background:#444;
+	padding:5px;
+	margin-top: 5px;
+	margin-bottom:3px;
+	COLOR: #429ef4;
+	clear:both;
+}
+
+#textarea_log
+{
+	float:left; 
+	clear:both;
+	margin:auto;
+	margin-top: 10px;
+	width:800px;
+	background:#bbb;
+	color:#fff;
+}
+
